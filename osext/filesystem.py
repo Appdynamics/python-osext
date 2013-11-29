@@ -16,10 +16,6 @@ def isfile(filename, mode='rb'):
     return False
 
 
-def rmdir_force(dir_name):
-    return sp.check_call(['rm', '-fR', dir_name])
-
-
 def rm_files(files_list, raise_on_error=False):
     for filename in files_list:
         try:
