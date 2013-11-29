@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='OSExtension',
-    version='0.1.1',
+    version='0.1.2',
     author='Andrew Udvare',
     author_email='audvare@gmail.com',
     packages=['osext'],
