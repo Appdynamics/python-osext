@@ -4,3 +4,4 @@ dist
 *~
 .desktop
 *.pyc
+.kdev4/
