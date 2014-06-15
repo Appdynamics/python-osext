@@ -1,0 +1,4 @@
+[Project]
+Manager=KDevGenericManager
+Name=osext
+VersionControl=kdevgit

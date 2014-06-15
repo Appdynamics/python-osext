@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from os.path import join as path_join, getmtime
+from sh import rsync
 import os
 import subprocess as sp
 
@@ -13,10 +14,6 @@ def isfile(filename, mode='rb'):
         pass
 
     return False
-
-
-def rmdir_force(dir_name):
-    return sp.check_call(['rm', '-fR', dir_name])
 
 
 def rm_files(files_list, raise_on_error=False):
@@ -32,7 +29,9 @@ def sync(remote_dir, target_dir):
     if '/' not in remote_dir[-1]:
         remote_dir += '/'
 
-    return sp.check_call(['rsync', '-a', remote_dir, target_dir])
+    output = rsync('-a', remote_dir, target_dir)
+
+    return output.exit_code
 
 
 def has_same_time(filename, filetime):

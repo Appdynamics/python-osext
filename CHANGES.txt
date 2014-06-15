@@ -1,1 +1,3 @@
+v0.1.2, 2013-11-28 -- Remove rmdir_force (replace with rmtree from shutil). Add
+                      documentation.
 v0.1.0, 2013-11-14 -- Initial release.
