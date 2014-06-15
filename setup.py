@@ -10,4 +10,7 @@ setup(
     license='LICENSE.txt',
     description='Extension for os module, for POSIX systems only',
     long_description=open('README.rst').read(),
+    install_requires=[
+        'sh==1.09',
+    ]
 )
